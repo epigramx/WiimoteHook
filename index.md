@@ -2,6 +2,7 @@
 
 ![3 images](https://i.imgur.com/ZyIqZMe.png)
 
+## What this is:
 WiimoteHook is software for the Nintendo Wii Remote that has native support for MotionPlus-based motion, the Nunchuk, Rumble, Mouse emulation from Gyroscope data, and XInput output. It can be used in a standalone fashion as an XInput, DS4 or mouse emulation layer but when combined with Cemuhook it provides 6-axes based motion on Cemu games from gyroscope and accelerometer data to the emulated GamePad.
 
 When driving a vanilla Wii Remote without MotionPlus hardware, the software retains basic 3-axes motion via Accelerometer data, which can be useful on games that use it as a "Wii Wheel", like Mario Kart 8.
@@ -11,7 +12,6 @@ Various additional options are provided by the software like multiple and custom
 ![mk8 motion settings](https://i.imgur.com/Bzid6IC.png)
 
 ## How to use it / Requirements:
-
 Step 1: **Get the latest WiimoteHook zip from the end of this post** and **extract the full folder to a location** including its subfolders. To extract the folder if you don't have a third-party tool for the job, just right click the .zip and select "Extract All.." or copy & paste the folder to another location after you open the .zip with explorer.
 
 Step 2: **Install the emulated gamepads driver** included in the WiimoteHook folder by running InstallEmulatedGamepadsDriver(run as admin).bat (right click->run as admin). This is not strictly required but **it allows WiimoteHook to produce the Rumble effect and a convenient XInput device** for Cemu's Input menu. The feature called "Also use for buttons/axes" of Cemuhook is also supported alternatively. **Win 7** machines also need for the XInput feature(ignore these URLs for Win8, 8.1 or 10): the _[xbox360 driver](https://www.microsoft.com/accessories/en-us/products/gaming/xbox-360-controller-for-windows/52a-00004#techspecs-connect)_, and [_this security update_](https://www.microsoft.com/en-us/download/details.aspx?id=46148). An alternative manual method to install that driver is posted _[here](https://github.com/nefarius/ViGEm/wiki/Driver-Installation)_ (on Win10, this method might require Anniversary Update or newer).
@@ -59,7 +59,6 @@ Note: **Shaking** a Nunchuk or a Remote corresponds to certain buttons. This beh
 Step 9: Load a game
 
 ## Caveats/Notes:
-
 1. Bluetooth pairing can be ..an adventure on Windows. WiimoteHook now has a built-in pairing method but if that fails (possibly because of an unsupported bluetooth stack) you can try standard windows tools for pairing and in some cases physically reconnecting an adapter, rebooting or removing a pairing might help. While Windows 7 or older installations can pair with the new Remote Plus devices, they require the [_Toshiba bluetooth stack_](https://extranet.toshiba-tro.de/en-us/supportquality/bluetoothinfopage/news/downloadtoshiba.aspx) to properly communicate with them; Windows 10's default method asks for a pin, but you can avoid that problem by "adding" it in "devices and printers" and click next when asked for a pin without entering one.
 
 2. DolphinBar works on mode 4 + it's normal to always return 4 devices and few of them to be detected as bogus + reconnecting it to another usb port often helps.
@@ -67,7 +66,6 @@ Step 9: Load a game
 3. Linux is partly supported now that we've added raw Bluetooth HID support in Wine (originally inspired for this software). Details/Instructions are _[here](https://forum.cemu.info/showthread.php/140-WiimoteHook-Nintendo-Wii-Remote-with-MotionPlus-Rumble-and-Nunchuk-support?p=1857&viewfull=1#post1857)_.
 
 ## Known bugs or limitations:
-
 1. Cemu 1.11.5 onwards includes emulated wiimotes in input settings but for some games it's mainly for booting and not playing them yet, and Cemuhook does not support motion for it.
 
 2. Multiple Wiimotes are supported, however motion only works for the first Cemu GamePad chosen as the first controller (this is a Cemu and Cemuhook limitation).
@@ -75,7 +73,6 @@ Step 9: Load a game
 3. Static MotionPlus calibration data are not fully reverse engineered. If your MotionPlus gets inverted axes you can switch that with the settings editor.
 
 ## Changelog:
-
 up to 20180616/080042/beta:
 - [Configuration editor, tray icon, and hide/show the console features](https://forum.cemu.info/showthread.php/140-WiimoteHook-Nintendo-Wii-Remote-with-MotionPlus-Rumble-and-Nunchuk-support?p=2679&viewfull=1#post2679)
 - [Mouse emulation from MotionPlus gyroscope data
@@ -87,7 +84,7 @@ up to 20180601/150417/alpha:
 - Better logging in .log.txt
 
 <details>
-  <summary>More Changelogs</summary>
+  <summary>All Changelogs</summary>
 
 up to 20180311/153427/alpha:
 - [Attempt to a fix for base calibration data and a logging feature](https://forum.cemu.info/showthread.php/140-WiimoteHook-Nintendo-Wii-Remote-with-MotionPlus-Rumble-and-Nunchuk-support?p=1981&viewfull=1#post1981)
@@ -136,10 +133,9 @@ Native XInput support
 
 </details>
 
-## Crowdfunding:
 
+## Crowdfunding:
 If you use this software consider a [contribution](https://tinyurl.com/y8x23xao); further crowdfunding/donation info and options are included in a relevant .txt file in the .zip.
 
 ## Downloads:
-
 **Latest release**:  [WiimoteHook_20180616_080042_beta.zip](http://drive.google.com/uc?export=download&id=123Lq-uX2lwL2Y42iiYi6fUJVwTawiHU9)
