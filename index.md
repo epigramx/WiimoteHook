@@ -138,4 +138,4 @@ Native XInput support
 If you use this software consider a [contribution](https://tinyurl.com/y8x23xao); further crowdfunding/donation info and options are included in a relevant .txt file in the .zip.
 
 ## Downloads:
-**Latest release**:  [WiimoteHook_20180616_080042_beta.zip](http://drive.google.com/uc?export=download&id=123Lq-uX2lwL2Y42iiYi6fUJVwTawiHU9)
+**Latest release**: [WiimoteHook_20180616_080042_beta.zip](http://drive.google.com/uc?export=download&id=123Lq-uX2lwL2Y42iiYi6fUJVwTawiHU9)
