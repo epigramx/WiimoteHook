@@ -7,7 +7,7 @@ WiimoteHook is software for the Nintendo Wii Remote that has native support for 
 
 When driving a vanilla Wii Remote without MotionPlus hardware, the software retains basic 3-axes motion via Accelerometer data, which can be useful on games that use it as a "Wii Wheel", like Mario Kart 8.
 
-Various additional options are provided by the software like multiple and custom orientations, DS4 hardware emulation, Rumble custom settings, multiple Wiimotes, and more.
+Various additional options are provided by the software like multiple and custom orientations, DS4 hardware emulation, Rumble custom settings, multiple(unlimited) Wiimotes, and more.
 
 ![mk8 motion settings](https://i.imgur.com/Bzid6IC.png)
 
@@ -23,6 +23,8 @@ Step 3: **Run WiimoteHook.exe** to automatically pair with or connect to a Wiimo
 Note: When WiimoteHook first runs and if it doesn't detect a device it will offer to **automatically pair Wiimotes with Windows** by pressing "B" and then pressing the red button on the Wiimotes (next pic); this needs standard Bluetooth support (if you're in the market for an adapter, special ones aren't required; a generic CSR 4.0 works well); If the pairing process fails (possibly because of an unsupported bluetooth stack) you can manually pair the device with standard windows tools.  In order to manually pair the device on Windows 10 **and avoid the PIN question** you might need to “Add” it as a device in “Devices and Printers” and click Next when asked for a Pin, without entering a pin. While **Windows 7 or older** installations can pair with the new Remote Plus devices, they require the [_Toshiba bluetooth stack_](https://extranet.toshiba-tro.de/en-us/supportquality/bluetoothinfopage/news/downloadtoshiba.aspx) to properly communicate with them.
 
 Note: **DolphinBar also works if set to mode 4** and since it always exposes 4 devices, it's normal for the software to detect bogus ones at launch before a real one is detected. If a DolphinBar doesn't work at first, it's reported **reconnecting** it to another USB port helps.  
+
+Note: To **reconnect** a paired remote after it's disconnected press "A" so that it's detected by the PC and it's reported "connected" in Windows. This is normal behavior for various gaming controllers. They power off to save power after disconnections and they need to wake up by a user action.
 
 ![console bt](https://i.imgur.com/vnJVgcj.gif)
 
@@ -68,7 +70,7 @@ Step 9: Load a game
 ## Known bugs or limitations:
 1. Cemu 1.11.5 onwards includes emulated wiimotes in input settings but for some games it's mainly for booting and not playing them yet, and Cemuhook does not support motion for it.
 
-2. Multiple Wiimotes are supported, however motion only works for the first Cemu GamePad chosen as the first controller (this is a Cemu and Cemuhook limitation).
+2. Multiple(unlimited) Wiimotes are supported, however motion only works for the first Cemu GamePad chosen as the first controller (this is a Cemu and Cemuhook limitation).
 
 3. Static MotionPlus calibration data are not fully reverse engineered. If your MotionPlus gets inverted axes you can switch that with the settings editor.
 
