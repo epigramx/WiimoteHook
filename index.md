@@ -3,7 +3,7 @@
 ![3 images](https://i.imgur.com/ZyIqZMe.png)
 
 ## What this is:
-WiimoteHook is software for the Nintendo Wii Remote that has native support for MotionPlus-based motion, the Nunchuk, Rumble, Mouse emulation from Gyroscope data, and XInput output. It can be used in a standalone fashion as an XInput, DS4 or mouse emulation layer but when combined with Cemuhook it provides 6-axes based motion on Cemu games from gyroscope and accelerometer data to the emulated GamePad.
+WiimoteHook is software for the Nintendo Wii Remote that has native support for MotionPlus-based motion, the Nunchuk, Rumble, Mouse emulation from Gyroscope data, and XInput output. It can be used in a standalone fashion as an XInput, DS4 or mouse emulation layer but when combined with Cemuhook's motion API it provides 6-axes based motion on Cemu games from gyroscope and accelerometer data to the emulated GamePad or emulated Wii Remote.
 
 When driving a vanilla Wii Remote without MotionPlus hardware, the software retains basic 3-axes motion via Accelerometer data, which can be useful on games that use it as a "Wii Wheel", like Mario Kart 8.
 
@@ -46,11 +46,15 @@ Note 2: **MotionPlus** hardware is autocalibrated a few seconds after launch and
 
 Step 6: **Have Cemuhook** in Cemu.exe’s directory. Use the latest version from [_here_](https://sshnuke.net/cemuhook). This step is not strictly required for all features, but it allows Cemu to receive motion data and non-XInput button data.
 
+**Note: Cemu 1.18.0 supports Cemuhook's API natively so Cemuhook is not required to be installed from that version onwards (note that the same version also supports motion for the emulated Wii Remote).**
+
 Step 7: Launch Cemu.exe, **select a motion source** now detected in the Options->Gamepad motion source menu (next pic). If you elect to not use XInput's binds, you can select “Also use for buttons/axes” (you can reconfigure buttons for that feature in the settings editor). "By Slot" or "By MAC" only affects behavior if there are multiple remotes; by selecting a remote by MAC it will be remembered as the motion source regardless of order of detection (Cemu and Cemuhook currently only support one motion source).
 
 ![cemuhook motion settings in cemu](https://i.imgur.com/OmJ9hb4.png)
 
 Step 8: Choose GamePad as controller 1, and also select "Controller #" under XInput and set up the buttons (or leave them be if you use the "Also use for buttons/axes" feature).
+
+Note: Cemu 1.18.0 added motion support on the emulated Wii Remote itself.
 
 Note: Cemu 1.11.5 onwards added emulated wiimotes but for some games it's mainly for booting and not playing them yet, and Cemuhook does not support motion servers for it.
 
@@ -68,7 +72,7 @@ Step 9: Load a game
 3. Linux is partly supported now that we've added raw Bluetooth HID support in Wine (originally inspired for this software). Details/Instructions are _[here](https://forum.cemu.info/showthread.php/140-WiimoteHook-Nintendo-Wii-Remote-with-MotionPlus-Rumble-and-Nunchuk-support?p=1857&viewfull=1#post1857)_.
 
 ## Known bugs or limitations:
-1. Cemu 1.11.5 onwards includes emulated wiimotes in input settings but for some games it's mainly for booting and not playing them yet, and Cemuhook does not support motion for it.
+1. Cemu 1.11.5 onwards includes emulated wiimotes in input settings but for some games it's mainly for booting and not playing them yet, and Cemuhook does not support motion for it. Update: Cemu 1.18.0 added support for motion with the emulated Wii Remote too.
 
 2. Multiple(unlimited) Wiimotes are supported, however motion only works for the first Cemu GamePad chosen as the first controller (this is a Cemu and Cemuhook limitation).
 
